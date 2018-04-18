@@ -1,24 +1,8 @@
-# README
+# How it works
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Post a link to "['SERVER_URL']/url" :
+	Example with curl:
+		curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"urls", "attributes":{"url":"https://goluxtech.com"}}}' http://localhost:3000/urls
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app will save the link, parse the page and save the h1,h2,h3 tag content and
+save the links
